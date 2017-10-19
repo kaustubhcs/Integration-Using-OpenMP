@@ -17,18 +17,18 @@ int main() {
     double answer = 0;
 
 #pragma omp parallel for
-    for (double i = 0; i < 1; i += (1.0/steps)) {
-    answer += (4.0 / 1 + (i*i) * ((1.0/steps)));
+    for (int i = 0; i < 1; i++) {
+        double loop_i = i/1000;
+
+        answer += (4.0 / 1 + (loop_i * loop_i) * ((1.0 / steps)));
     }
 
     cout.precision(19);
-    cout << "Calculated PI: "<< answer << endl;
+    cout << "Calculated PI: " << answer << endl;
     cout << "Math PI: " << M_PI << endl;
     double difference;
     difference = answer - M_PI;
     cout << "Difference is: " << difference << endl;
-
-
 
 
     return 0;
