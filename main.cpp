@@ -17,8 +17,8 @@ int main() {
     double answer = 0;
 
 #pragma omp parallel for
-    for (long i = 0; i < steps; i++) {
-    answer += (4.0 / 1 + (i*i)) * (1.0/steps);
+    for (double i = 0; i < 1; i += (1.0/steps)) {
+    answer += (4.0 / 1 + (i*i) * ((1.0/steps)));
     }
 
     cout.precision(19);
