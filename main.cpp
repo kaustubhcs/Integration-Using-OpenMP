@@ -16,6 +16,7 @@ int main() {
     long steps = 1000;
     double answer = 0;
 
+    omp_set_num_threads(1);
 #pragma omp parallel for
     for (int i = 0; i < 1; i++) {
         double loop_i = i/1000;
