@@ -23,7 +23,7 @@ int main() {
         double loop_i = i/1000;
 
         answer += (4.0 / 1 + (loop_i * loop_i) * ((1.0 / steps)));
-        cout << "Answer: "<< answer << endl;
+        cout << "For i: "<< i << " Answer: "<< answer << endl;
     }
 
     cout.precision(19);
