@@ -17,11 +17,13 @@ int main() {
     double answer = 0;
 
     omp_set_num_threads(1);
+
 #pragma omp parallel for
     for (int i = 0; i < 1; i++) {
         double loop_i = i/1000;
 
         answer += (4.0 / 1 + (loop_i * loop_i) * ((1.0 / steps)));
+        cout << "Answer: "<< answer << endl;
     }
 
     cout.precision(19);
